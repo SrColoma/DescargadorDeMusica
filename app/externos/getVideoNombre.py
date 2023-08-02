@@ -27,4 +27,4 @@ def getVideoNombre():
     video_title = ''.join(c for c in video_title if c in valid_chars)
     video_title = unicodedata.normalize('NFKD', video_title).encode('ASCII', 'ignore').decode('utf-8')
 
-    return jsonify({'nombre': video_title, 'duracion': video_duration, 'miniatura': video_miniatura_url})
+    return jsonify({'nombre': video_title, 'duracion': video_duration, 'miniatura': video_miniatura_url, 'url': url})
